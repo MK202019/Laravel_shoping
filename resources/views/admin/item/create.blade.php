@@ -6,5 +6,21 @@
 
     <label for="">商品名</label>
     <input type="text" name="name">
-    <button>更新</button>
+
+    <div>
+        <label for="">{{ __('Item Name') }}</label>
+        <input type="text" name="name">
+    </div>
+    <div>
+        <label for="">{{ __('Item Code') }}</label>
+        <input type="text" name="code">
+    </div>
+    <div>
+        <label for="">{{ __('Price') }}</label>
+        <input type="number" name="price">
+    </div>
+
+
+
+    <button>{{ __('Update') }}</button>
 </form>
