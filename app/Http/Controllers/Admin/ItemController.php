@@ -27,4 +27,10 @@ class ItemController extends Controller
         Item::create($posts);
         return redirect('/admin/item');
     }
+
+    public function edit(Request $request, $id)
+    {
+        dd($id);
+        return view('admin.item.create');
+    }
 }
