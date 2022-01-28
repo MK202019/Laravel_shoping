@@ -12,7 +12,7 @@ class ItemController extends Controller
     {
         $items = Item::get();
         //dd($items);
-        $data = ['items'=>$items];
+        $data = ['items'=> $items];
         return view('admin.item.index',$data);
     }
 
