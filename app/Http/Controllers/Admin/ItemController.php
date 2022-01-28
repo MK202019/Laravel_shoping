@@ -11,7 +11,6 @@ class ItemController extends Controller
     public function index()
     {
         $items = Item::get();
-        //dd($items);
         $data = ['items'=> $items];
         return view('admin.item.index',$data);
     }
@@ -30,7 +29,8 @@ class ItemController extends Controller
 
     public function edit(Request $request, $id)
     {
-        dd($id);
-        return view('admin.item.create');
+        $item = Item::find($id);
+        $data = ['item => $item'];
+        return view('admin.item.edit',$data);
     }
 }
